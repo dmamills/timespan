@@ -21,6 +21,9 @@ Import into your file and create a timespan
   
     var date = new Date();
     date = ts.addToDate(date);
+
+    //or
+    date.addTimespan(ts);
   
  ```
     

@@ -15,9 +15,10 @@ module.exports = function(grunt){
 			tasks:['mochaTest']
 		}
 
-	});	
+	});
 	
 	grunt.loadNpmTasks('grunt-mocha-test');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-beautify');
 	grunt.registerTask('default',['mochaTest','watch']);
 };

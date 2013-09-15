@@ -42,14 +42,13 @@ Timespan.prototype.addDay = function(num) {
 	return this;
 };
 
-
 Timespan.prototype.addToDate = function(d) {
 	return new Date(d.getTime() + this.span);
 };
 
 Date.prototype.addTimespan = function(ts) {
 	return new Date(this.getTime() + ts.span);
-}
+};
 
 if(module.exports){
 	module.exports = Timespan;
