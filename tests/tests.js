@@ -1,5 +1,5 @@
 var assert = require("assert"),
-	Timespan = require('./../timespan');
+	Timespan = require('./../index');
 
 
 describe('Timespan',function() {

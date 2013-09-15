@@ -50,6 +50,4 @@ Date.prototype.addTimespan = function(ts) {
 	return new Date(this.getTime() + ts.span);
 };
 
-if(module.exports){
-	module.exports = Timespan;
-}
+module.exports = Timespan;

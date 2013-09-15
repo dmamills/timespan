@@ -3,9 +3,14 @@ timespan
 
 Timespan is a chainable object you can use to create timespans for interacting with the js Date object in node.js.
 
+Install via npm
+```
+	npm install timespanjs
+```
+
 Import into your file and create a timespan
  ```javascript
-    var Timespan = require('./timespan');
+    var Timespan = require('timespanjs');
     var ts = new Timespan();
  ```
  

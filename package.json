@@ -1,12 +1,12 @@
 {
 	"name":"timespanjs",
 	"private":false,
-	"version":"0.1.0",
+	"version":"0.1.2",
 	"description":"create timespans for using with dates",
 	"author":"daniel mills",
 	"engines": {
-    	"node": "0.10.x",
-    	"npm": "1.2.x"
+    	"node": "*",
+    	"npm": "*"
   	},
 	"devDependencies": {
 		"grunt":"~0.4.1",
