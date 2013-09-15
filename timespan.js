@@ -44,8 +44,12 @@ Timespan.prototype.addDay = function(num) {
 
 
 Timespan.prototype.addToDate = function(d) {
-	return new Date(date.getTime() + this.span);
+	return new Date(d.getTime() + this.span);
 };
+
+Date.prototype.addTimespan = function(ts) {
+	return new Date(this.getTime() + ts.span);
+}
 
 if(module.exports){
 	module.exports = Timespan;
