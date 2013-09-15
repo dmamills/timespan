@@ -1,7 +1,7 @@
 {
-	"name":"timespan",
-	"private":true,
-	"version":"0.0.1",
+	"name":"timespanjs",
+	"private":false,
+	"version":"0.1.0",
 	"description":"create timespans for using with dates",
 	"author":"daniel mills",
 	"engines": {
