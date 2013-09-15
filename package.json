@@ -1,0 +1,16 @@
+{
+	"name":"timespan",
+	"private":true,
+	"version":"0.0.1",
+	"description":"create timespans for using with dates",
+	"author":"daniel mills",
+	"engines": {
+    	"node": "0.10.x",
+    	"npm": "1.2.x"
+  	},
+	"devDependencies": {
+		"grunt":"~0.4.1",
+		"grunt-contrib-watch":">=0.3.1",
+		"grunt-mocha-test":"*"
+	}
+}

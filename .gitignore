@@ -1,7 +1,5 @@
 */.DS_STORE
 .DS_STORE
-
-
 *.swp
-
 timespan-main.js
+node_modules/*
