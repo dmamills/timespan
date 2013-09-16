@@ -1,11 +1,6 @@
-
 function Timespan() {
-
 	if(!(this instanceof Timespan)) return new Timespan();
-
-	if(!this.span)
-		this.span = 0;
-
+	if(!this.span) this.span = 0;
 	return this;
 }
 

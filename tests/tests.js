@@ -6,7 +6,7 @@ describe('Timespan',function() {
 	describe('constructor',function() {
 
 		it('it should be created with new', function() {
-			assert.ok(new Timespan() instanceof Timespan);	
+			assert.ok(new Timespan() instanceof Timespan);
 		});
 
 		it('should be created without new',function() {
@@ -55,5 +55,18 @@ describe('Timespan',function() {
 			ms.addMillisecond(1).addSecond(1).addMinute(1);
 			assert.equal(ms.span,61001);
 		});
+	});
+
+
+	describe('date object',function(){
+		it('date object should have add timespan function',function(){
+			var d = new Date();
+			assert.ok(d.addTimespan);
+		});
+
+		it('ts should have add to date function',function(){
+			var ts = new Timespan();
+			assert.ok(ts.addToDate);
+		})
 	});
 });
