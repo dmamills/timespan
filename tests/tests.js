@@ -16,6 +16,12 @@ describe('Timespan',function() {
 		it('should start at zero',function(){
 			assert.equal(Timespan().span,0);
 		});
+
+		it('should accept a parameter',function(){
+			var ts = new Timespan().addMillisecond(123);
+			assert.equal(ts.span,new Timespan(123).span);
+			assert.equal(ts.span,Timespan(123).span);
+		});
 	});
 
 	describe('add time',function(){

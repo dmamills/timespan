@@ -10,20 +10,20 @@ module.exports = function(grunt){
 				src:['tests/tests.js']
 			}
 		},
-		jslint: {
+		jshint: {
 			all: {
-				src: [ '*.js','tests/*.js' ]
+				src: [ 'Timespan.js' ]
 			}
 		},
 		watch: {
 			files:['tests/*.js','*.js'],
-			tasks:['mochaTest','jslint']
+			tasks:['mochaTest','jshint']
 		}
 	});
 	
 	grunt.loadNpmTasks('grunt-mocha-test');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-beautify');
-	grunt.loadNpmTasks('grunt-jslint');
-	grunt.registerTask('default',['mochaTest','watch','jslint']);
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.registerTask('default',['mochaTest','jshint','watch']);
 };
