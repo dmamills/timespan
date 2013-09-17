@@ -12,6 +12,9 @@ Import into your file and create a timespan
  ```javascript
     var Timespan = require('timespanjs');
     var ts = new Timespan();
+
+    //pass it a starting time
+    var ts = new Timespan(1234);
  ```
  
  Add time

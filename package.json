@@ -14,10 +14,14 @@
   		"url" : "http://github.com/dmamills/timespan.git"
   	},
 	"devDependencies": {
+		"mocha":"*",
 		"grunt":"~0.4.1",
 		"grunt-contrib-watch":">=0.3.1",
 		"grunt-mocha-test":"*",
 		"grunt-beautify":"*",
 		"grunt-contrib-jshint":"*"
+	},
+	"scripts": {
+		"test": "make test"
 	}
 }

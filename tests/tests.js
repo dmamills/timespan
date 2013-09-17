@@ -13,7 +13,7 @@ describe('Timespan',function() {
 			assert.ok(Timespan() instanceof Timespan);
 		});
 
-		it('should start at zero',function(){
+		it('should start at zero with no parameter',function(){
 			assert.equal(Timespan().span,0);
 		});
 
@@ -22,9 +22,18 @@ describe('Timespan',function() {
 			assert.equal(ts.span,new Timespan(123).span);
 			assert.equal(ts.span,Timespan(123).span);
 		});
+
+		it('should be seperate instances',function(){
+			assert.notEqual(new Timespan(),new Timespan());
+			assert.notEqual(new Timespan(123),new Timespan(123));
+
+			assert.notEqual(Timespan(),Timespan());
+			assert.notEqual(Timespan(123),Timespan(123));
+			
+		});
 	});
 
-	describe('add time',function(){
+	describe('add time',function() {
 
 		it('should add one millisecond',function(){
 			var ms = new Timespan();
@@ -50,7 +59,7 @@ describe('Timespan',function() {
 			assert.equal(ms.span,(1000*60*60));
 		});
 
-		it('should add one hour',function(){
+		it('should add one hour',function() {
 			var ms = new Timespan();
 			ms.addDay(1);
 			assert.equal(ms.span,(1000*60*60*24));
@@ -64,7 +73,7 @@ describe('Timespan',function() {
 	});
 
 
-	describe('date object',function(){
+	describe('date object additions',function(){
 		it('date object should have add timespan function',function(){
 			var d = new Date();
 			assert.ok(d.addTimespan);
@@ -73,6 +82,6 @@ describe('Timespan',function() {
 		it('ts should have add to date function',function(){
 			var ts = new Timespan();
 			assert.ok(ts.addToDate);
-		})
+		});
 	});
 });
