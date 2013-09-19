@@ -1,7 +1,9 @@
-timespan
+timespan 
 ========
 
-Timespan is a chainable object you can use to create timespans for interacting with the js Date object in node.js.
+[![Build Status](https://secure.travis-ci.org/lloyd/node-memwatch.png)](http://travis-ci.org/lloyd/node-memwatch)
+[![Build Status](https://ecure.travis-ci.org/dmamills/timespan.png)](http://travis-ci.org/dmamills/timespan)
+Timespan is a chainable object you can use to represent a span of time for interacting with the js Date object in node.js.
 
 Install via npm
 ```
@@ -15,6 +17,10 @@ Import into your file and create a timespan
 
     //pass it a starting time
     var ts = new Timespan(1234);
+
+    //pass it another timespan object
+    var ts1 = new Timespan(1234);
+    var ts2 = new Timespan(ts1);
  ```
  
  Add time
@@ -36,9 +42,10 @@ Import into your file and create a timespan
  ```
 
 Timespan is very useful for intervals and timeouts
+
 ```javascript
 	var everyThirtyMinutes = new Timespan().addMinutes(30);
-	setInterval(func,everyThirtyMinutes.span);
+	setInterval(doThing,everyThirtyMinutes.span);
 ```
 
     

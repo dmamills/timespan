@@ -17,10 +17,17 @@ describe('Timespan',function() {
 			assert.equal(Timespan().span,0);
 		});
 
-		it('should accept a parameter',function(){
+		it('should accept a number as a parameter',function(){
 			var ts = new Timespan().addMillisecond(123);
 			assert.equal(ts.span,new Timespan(123).span);
 			assert.equal(ts.span,Timespan(123).span);
+		});
+
+		it('should accept a timespan as a parameter',function() {
+
+			var ts = new Timespan().addMillisecond(123);
+			assert.ok(new Timespan(ts));
+			assert.equal(ts.span, new Timespan(ts).span);
 		});
 
 		it('should be seperate instances',function(){

@@ -1,11 +1,17 @@
 function Timespan() {
 	'use strict';
 	if (!(this instanceof Timespan)) {
-		return new Timespan(arguments[0]);
+		return (arguments.length === 0) ? new Timespan() : new Timespan(arguments[0]);
 	}
 
-	if(arguments.length !== 0 && typeof arguments[0] === 'number') {
-		this.span = arguments[0];
+	if(arguments.length !== 0) {
+
+		if(typeof arguments[0] === 'number') {
+			this.span = arguments[0];
+		} else if(arguments[0] instanceof Timespan) {
+			console.log(typeof arguments[0].span + ': '+arguments[0].span);
+			this.span = arguments[0].span;
+		}
 	} else {
 		this.span = 0;
 	}
