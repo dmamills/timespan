@@ -1,8 +1,7 @@
 timespan 
 ========
 
-[![Build Status](https://secure.travis-ci.org/lloyd/node-memwatch.png)](http://travis-ci.org/lloyd/node-memwatch)
-[![Build Status](https://ecure.travis-ci.org/dmamills/timespan.png)](http://travis-ci.org/dmamills/timespan)
+[![Build Status](https://secure.travis-ci.org/dmamills/timespan.png)](http://travis-ci.org/dmamills/timespan)
 Timespan is a chainable object you can use to represent a span of time for interacting with the js Date object in node.js.
 
 Install via npm
