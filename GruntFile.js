@@ -17,7 +17,14 @@ module.exports = function(grunt){
 		},
 		watch: {
 			files:['tests/*.js','*.js'],
-			tasks:['mochaTest','jshint']
+			tasks:['mochaTest','jshint','uglify']
+		},
+		uglify: {
+			my_target: {
+				files: {
+					'bin/Timespan.min.js': 'Timespan.js'
+				}
+			}
 		}
 	});
 	
@@ -25,5 +32,6 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-beautify');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.registerTask('default',['mochaTest','jshint','watch']);
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.registerTask('default',['mochaTest','jshint','uglify','watch']);
 };

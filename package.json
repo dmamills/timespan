@@ -1,7 +1,7 @@
 {
 	"name":"timespanjs",
 	"private":false,
-	"version":"0.1.5",
+	"version":"0.1.7",
 	"description":"create timespans objects for using with native js dates",
 	"keywords":["time","timespan","date","dates","datetime","utility"],
 	"author":"Daniel Mills",
@@ -19,7 +19,8 @@
 		"grunt-contrib-watch":">=0.3.1",
 		"grunt-mocha-test":"*",
 		"grunt-beautify":"*",
-		"grunt-contrib-jshint":"*"
+		"grunt-contrib-jshint":"*",
+		"grunt-contrib-uglify":"*"
 	},
 	"scripts": {
 		"test": "make test"

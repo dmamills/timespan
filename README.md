@@ -3,12 +3,18 @@ timespan
 
 [![Build Status](https://secure.travis-ci.org/dmamills/timespan.png)](http://travis-ci.org/dmamills/timespan)
 
-Timespan is a chainable object you can use to represent a span of time for interacting with the js Date object in node.js.
+Timespan is a chainable object you can use to represent a span of time for interacting with the js Date object in node.js, and the browser.
 
 Install via npm
 ```
 	npm install timespanjs
 ```
+
+Use in browser
+```
+    <script src="bin/timespan.min.js"></script>
+```
+
 
 Import into your file and create a timespan
  ```javascript
