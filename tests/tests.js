@@ -79,6 +79,56 @@ describe('Timespan',function() {
 		});
 	});
 
+	describe('timespan toString',function(){
+		it('should use singular form for one unit',function(){
+			var ts;
+
+			ts = new Timespan().addMillisecond(1);
+			assert.equal(ts.toString(),'1 millisecond');
+
+			ts = new Timespan().addSecond(1);
+			assert.equal(ts.toString(),'1 second');
+
+			ts = new Timespan().addMinute(1);
+			assert.equal(ts.toString(),'1 minute');
+
+			ts = new Timespan().addHour(1);
+			assert.equal(ts.toString(),'1 hour');
+
+			ts = new Timespan().addDay(1);
+			assert.equal(ts.toString(),'1 day');
+
+		});
+
+		it('should use plural form for greater than 1 unit',function() {
+			var ts;
+
+			ts = new Timespan().addMillisecond(2);
+			assert.equal(ts.toString(),'2 milliseconds');
+
+			ts = new Timespan().addSecond(2);
+			assert.equal(ts.toString(),'2 seconds');
+
+			ts = new Timespan().addMinute(2);
+			assert.equal(ts.toString(),'2 minutes');
+
+			ts = new Timespan().addHour(2);
+			assert.equal(ts.toString(),'2 hours');
+
+			ts = new Timespan().addDay(2);
+			assert.equal(ts.toString(),'2 days');
+
+		});
+
+		it('should display all units together',function(){
+
+			var ts = new Timespan().addSecond(1).addMinute(1).addHour(1);
+			assert.equal(ts.toString(),'1 hour 1 minute 1 second');
+
+			ts = new Timespan().addSecond(2).addMinute(2).addHour(2);
+			assert.equal(ts.toString(),'2 hours 2 minutes 2 seconds');
+		});
+	});
 
 	describe('date object additions',function(){
 		it('date object should have add timespan function',function(){

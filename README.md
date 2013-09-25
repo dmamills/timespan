@@ -47,6 +47,16 @@ Import into your file and create a timespan
   
  ```
 
+
+display as a string
+ ```javascript
+    var ts = new Timespan().addHour(2).addMinute(1).addSecond(13);
+
+    //returns '2 hours 1 minute 13 seconds'
+    ts.toString();
+
+ ```
+
 Timespan is very useful for intervals and timeouts
 
 ```javascript
