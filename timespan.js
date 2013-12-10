@@ -82,7 +82,19 @@
                                 }
                             }
                         return r.trimRight();
-                    }
+                    },
+        setTimeout:function(fn) {
+            return setTimeout(fn,this.span);
+        },
+        setInterval:function(fn) {
+            return setInterval(fn,this.span);
+        },
+        clearInterval:function(k) {
+            clearInterval(k);
+        },
+        clearTimeout:function(k) {
+            clearTimeout(k);
+        }
     });
 
 
@@ -92,12 +104,6 @@
                         return new Date(this.getTime() + ts.span);
                     },
 
-    });
-
-    extend(this,{
-        setTimeout: function(func,time) {
-            return (time instanceof Timespan) ? this.setTimeout(func,time.span) : this.setTimeout(func,time); 
-        }
     });
 
     if (typeof exports !== 'undefined') module.exports = exports = Timespan;

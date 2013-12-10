@@ -12,7 +12,7 @@ module.exports = function(grunt){
         },
         jshint: {
             all: {
-                src: [ 'Timespan.js' ]
+                src: [ 'timespan.js' ]
             }
         },
         watch: {
@@ -22,7 +22,7 @@ module.exports = function(grunt){
         uglify: {
             my_target: {
                 files: {
-                    'bin/Timespan.min.js': 'Timespan.js'
+                    'bin/timespan.min.js': 'timespan.js'
                 }
             }
         }
