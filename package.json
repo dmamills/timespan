@@ -1,7 +1,7 @@
 {
     "name":"timespanjs",
     "private":false,
-    "version":"0.1.8",
+    "version":"0.2.1",
     "description":"create timespans objects for using with native js dates",
     "keywords":["time","timespan","date","dates","datetime","utility"],
     "author":"Daniel Mills",

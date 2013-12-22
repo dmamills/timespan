@@ -64,13 +64,13 @@ Timespan is very useful for intervals and timeouts
 	var intervalId = everyThirtyMinutes.setInterval(function(){
         console.log('interval!');
     });
-    everyThirtyMinutes.clearInterval(intervalId);
+    clearInterval(intervalId);
 
     var timeoutId = everyThirtyMinutes.setTimeout(function(){
         console.log('timeout!');
     });
 
-    everyThirtyMinutes.clearTimeout(timeoutId);
+    clearTimeout(timeoutId);
 
 ```
 

@@ -88,12 +88,6 @@
         },
         setInterval:function(fn) {
             return setInterval(fn,this.span);
-        },
-        clearInterval:function(k) {
-            clearInterval(k);
-        },
-        clearTimeout:function(k) {
-            clearTimeout(k);
         }
     });
 
